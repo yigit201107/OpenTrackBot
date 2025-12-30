@@ -1,0 +1,305 @@
+2025-12-29 18:15:00,787 - __main__ - INFO - 🚀 Запуск бота...
+2025-12-29 18:15:00,787 - __main__ - INFO - ✅ CryptoBot подключен!
+2025-12-29 18:15:00,787 - aiogram.dispatcher - INFO - Start polling
+2025-12-29 18:15:00,805 - __main__ - ERROR - Inactivity check error: no such column: last_activity
+2025-12-29 18:15:01,057 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:15:01,140 - aiogram.dispatcher - INFO - Run polling for bot @OpenTrack_bot id=8418490320 - 'OpenTrackBot'
+2025-12-29 18:15:16,867 - aiogram.event - INFO - Update id=300344861 is handled. Duration 457 ms by bot id=8418490320
+2025-12-29 18:15:25,393 - __main__ - ERROR - URL check error https://t.me/Durov: Cannot connect to host t.me:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:15:26,755 - __main__ - ERROR - URL check error https://vk.com/Durov: Cannot connect to host vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:15:27,129 - __main__ - ERROR - URL check error https://github.com/Durov: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:15:29,693 - __main__ - ERROR - VK profile error: Cannot connect to host api.vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:15:29,905 - aiogram.event - INFO - Update id=300344862 is handled. Duration 4916 ms by bot id=8418490320
+2025-12-29 18:15:31,343 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:15:47,024 - aiogram.event - INFO - Update id=300344863 is handled. Duration 598 ms by bot id=8418490320
+2025-12-29 18:15:50,787 - aiogram.event - INFO - Update id=300344864 is not handled. Duration 1 ms by bot id=8418490320
+2025-12-29 18:15:50,787 - aiogram.event - ERROR - Cause exception while process update id=300344864 by bot id=8418490320
+OperationalError: no such column: username
+Traceback (most recent call last):
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/bot.py", line 747, in admin_users
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT user_id, username, first_name, stars, subscription,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        LIMIT 15
+        ^^^^^^^^
+    """)
+    ^^^^
+sqlite3.OperationalError: no such column: username
+2025-12-29 18:16:01,621 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:16:08,441 - aiogram.event - INFO - Update id=300344865 is handled. Duration 213 ms by bot id=8418490320
+2025-12-29 18:16:21,932 - __main__ - ERROR - URL check error https://t.me/aanixso: Cannot connect to host t.me:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:16:23,345 - __main__ - ERROR - URL check error https://vk.com/aanixso: Cannot connect to host vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:16:23,761 - __main__ - ERROR - URL check error https://github.com/aanixso: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:16:25,913 - __main__ - ERROR - VK profile error: Cannot connect to host api.vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:16:26,167 - aiogram.event - INFO - Update id=300344866 is handled. Duration 4592 ms by bot id=8418490320
+2025-12-29 18:16:31,974 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:16:34,752 - aiogram.event - INFO - Update id=300344867 is handled. Duration 512 ms by bot id=8418490320
+2025-12-29 18:16:38,347 - aiogram.event - INFO - Update id=300344868 is handled. Duration 145 ms by bot id=8418490320
+2025-12-29 18:16:47,814 - __main__ - ERROR - Google search error: Cannot connect to host www.googleapis.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:16:48,052 - aiogram.event - INFO - Update id=300344869 is handled. Duration 1007 ms by bot id=8418490320
+2025-12-29 18:16:59,810 - aiogram.event - INFO - Update id=300344870 is handled. Duration 134 ms by bot id=8418490320
+2025-12-29 18:17:02,194 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:17:16,012 - __main__ - ERROR - HIBP error: Cannot connect to host haveibeenpwned.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:17:16,227 - aiogram.event - INFO - Update id=300344871 is handled. Duration 668 ms by bot id=8418490320
+2025-12-29 18:17:32,325 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:17:33,167 - aiogram.event - INFO - Update id=300344872 is handled. Duration 314 ms by bot id=8418490320
+2025-12-29 18:17:35,745 - aiogram.event - INFO - Update id=300344873 is handled. Duration 128 ms by bot id=8418490320
+2025-12-29 18:17:45,109 - __main__ - ERROR - Google search error: Cannot connect to host www.googleapis.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:17:48,648 - __main__ - ERROR - VK search error: Cannot connect to host api.vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:17:49,404 - aiogram.event - INFO - Update id=300344874 is handled. Duration 5168 ms by bot id=8418490320
+2025-12-29 18:17:58,563 - aiogram.event - INFO - Update id=300344875 is handled. Duration 686 ms by bot id=8418490320
+2025-12-29 18:18:00,974 - aiogram.event - INFO - Update id=300344876 is handled. Duration 119 ms by bot id=8418490320
+2025-12-29 18:18:02,606 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:18:08,466 - __main__ - ERROR - URL check error https://t.me/nailkity: Cannot connect to host t.me:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:10,516 - __main__ - ERROR - URL check error https://vk.com/nailkity: Cannot connect to host vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:10,928 - __main__ - ERROR - URL check error https://github.com/nailkity: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:18:14,132 - __main__ - ERROR - VK profile error: Cannot connect to host api.vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:14,366 - aiogram.event - INFO - Update id=300344877 is handled. Duration 6315 ms by bot id=8418490320
+2025-12-29 18:18:32,849 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:18:43,303 - aiogram.event - INFO - Update id=300344878 is not handled. Duration 2 ms by bot id=8418490320
+2025-12-29 18:18:47,711 - aiogram.event - INFO - Update id=300344879 is handled. Duration 310 ms by bot id=8418490320
+2025-12-29 18:18:49,393 - aiogram.event - INFO - Update id=300344880 is handled. Duration 156 ms by bot id=8418490320
+2025-12-29 18:18:53,212 - __main__ - ERROR - URL check error https://t.me/dzmshtmg: Cannot connect to host t.me:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:54,456 - __main__ - ERROR - URL check error https://vk.com/dzmshtmg: Cannot connect to host vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:54,726 - __main__ - ERROR - URL check error https://github.com/dzmshtmg: Cannot connect to host github.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)')]
+2025-12-29 18:18:56,915 - __main__ - ERROR - VK profile error: Cannot connect to host api.vk.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)')]
+2025-12-29 18:18:57,214 - aiogram.event - INFO - Update id=300344881 is handled. Duration 4286 ms by bot id=8418490320
+2025-12-29 18:19:03,122 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:19:15,996 - aiogram.event - INFO - Update id=300344882 is not handled. Duration 2 ms by bot id=8418490320
+2025-12-29 18:19:15,997 - aiogram.event - ERROR - Cause exception while process update id=300344882 by bot id=8418490320
+OperationalError: no such column: total_spent
+Traceback (most recent call last):
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/bot.py", line 788, in admin_stats
+    cur.execute("SELECT SUM(total_spent) as revenue FROM users")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: total_spent
+2025-12-29 18:19:25,898 - aiogram.event - INFO - Update id=300344883 is not handled. Duration 0 ms by bot id=8418490320
+2025-12-29 18:19:25,898 - aiogram.event - ERROR - Cause exception while process update id=300344883 by bot id=8418490320
+OperationalError: no such column: last_activity
+Traceback (most recent call last):
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/bot.py", line 328, in start
+    user = get_user(m.from_user.id, m.from_user.username, m.from_user.first_name)
+  File "/Users/yigittoprak/Python/bot.py", line 114, in get_user
+    cur.execute("UPDATE users SET last_activity=? WHERE user_id=?", (int(time.time()), uid))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: last_activity
+2025-12-29 18:19:33,392 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:19:36,021 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-12-29 18:19:36,022 - aiogram.dispatcher - INFO - Polling stopped for bot @OpenTrack_bot id=8418490320 - 'OpenTrackBot'
+2025-12-29 18:19:36,023 - aiogram.dispatcher - INFO - Polling stopped
+2025-12-29 18:19:36,274 - __main__ - INFO - 🛑 Остановка бота...
+2025-12-29 18:19:37,626 - __main__ - INFO - 🚀 Запуск бота...
+2025-12-29 18:19:37,627 - __main__ - INFO - ✅ CryptoBot подключен!
+2025-12-29 18:19:37,627 - aiogram.dispatcher - INFO - Start polling
+2025-12-29 18:19:37,645 - __main__ - ERROR - Inactivity check error: no such column: last_activity
+2025-12-29 18:19:37,868 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:19:37,887 - aiogram.dispatcher - INFO - Run polling for bot @OpenTrack_bot id=8418490320 - 'OpenTrackBot'
+2025-12-29 18:19:39,716 - aiogram.event - INFO - Update id=300344884 is not handled. Duration 0 ms by bot id=8418490320
+2025-12-29 18:19:39,717 - aiogram.event - ERROR - Cause exception while process update id=300344884 by bot id=8418490320
+OperationalError: no such column: last_activity
+Traceback (most recent call last):
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/venv/lib/python3.14/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/yigittoprak/Python/bot.py", line 328, in start
+    user = get_user(m.from_user.id, m.from_user.username, m.from_user.first_name)
+  File "/Users/yigittoprak/Python/bot.py", line 114, in get_user
+    cur.execute("UPDATE users SET last_activity=? WHERE user_id=?", (int(time.time()), uid))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: last_activity
+2025-12-29 18:20:08,182 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:20:38,494 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:21:08,737 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:21:38,972 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:22:09,203 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:22:39,436 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:23:09,710 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:23:39,962 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:24:26,521 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:24:56,803 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:25:27,076 - __main__ - ERROR - Payment check error: 'NoneType' object is not iterable
+2025-12-29 18:42:29,793 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-12-29 18:42:29,795 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8418490320)
+2025-12-29 18:42:34,250 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-12-29 18:42:34,251 - aiogram.dispatcher - INFO - Polling stopped for bot @OpenTrack_bot id=8418490320 - 'OpenTrackBot'
+2025-12-29 18:42:34,251 - aiogram.dispatcher - INFO - Polling stopped
+2025-12-29 18:42:34,502 - __main__ - INFO - 🛑 Остановка бота...
